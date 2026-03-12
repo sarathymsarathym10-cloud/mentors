@@ -1,0 +1,216 @@
+/* Container */
+
+.mentor-booking-container{
+  padding:40px;
+  text-align:center;
+}
+
+/* Title */
+
+.mentor-booking-container h2{
+  margin-bottom:30px;
+  font-size:28px;
+  animation: fadeDown 0.8s ease;
+}
+
+/* Card */
+
+.mentor-booking-card{
+  background:#ffffff;
+  width:320px;
+  margin:20px auto;
+  padding:20px;
+  border-radius:12px;
+  box-shadow:0 8px 20px rgba(0,0,0,0.1);
+  transition:0.3s;
+  animation: cardPop 0.6s ease;
+}
+
+/* Hover animation */
+
+.mentor-booking-card:hover{
+  transform:translateY(-8px) scale(1.02);
+  box-shadow:0 12px 25px rgba(0,0,0,0.2);
+}
+
+/* Status */
+
+.status{
+  margin-left:8px;
+  padding:4px 10px;
+  border-radius:20px;
+  font-size:14px;
+}
+
+.status.pending{
+  background:orange;
+  color:white;
+}
+
+.status.accepted{
+  background:green;
+  color:white;
+}
+
+.status.rejected{
+  background:red;
+  color:white;
+}
+
+/* Buttons */
+
+.mentor-buttons{
+  margin-top:15px;
+}
+
+.mentor-buttons button{
+  padding:8px 14px;
+  margin:5px;
+  border:none;
+  border-radius:6px;
+  cursor:pointer;
+  font-weight:bold;
+  transition:0.3s;
+}
+
+/* Accept */
+
+.mentor-buttons button:first-child{
+  background:#28a745;
+  color:white;
+}
+
+.mentor-buttons button:first-child:hover{
+  transform:scale(1.1);
+  background:#1e7e34;
+}
+
+/* Reject */
+
+.mentor-buttons button:last-child{
+  background:#dc3545;
+  color:white;
+}
+
+.mentor-buttons button:last-child:hover{
+  transform:scale(1.1);
+  background:#a71d2a;
+}
+
+/* Chat button */
+
+.chat-btn{
+  margin-top:15px;
+  padding:10px 18px;
+  border:none;
+  background:#007bff;
+  color:white;
+  border-radius:6px;
+  cursor:pointer;
+  font-weight:bold;
+  transition:0.3s;
+}
+
+.chat-btn:hover{
+  transform:scale(1.08);
+  background:#0056b3;
+}
+
+/* Animations */
+
+@keyframes cardPop{
+  from{
+    opacity:0;
+    transform:scale(0.8);
+  }
+  to{
+    opacity:1;
+    transform:scale(1);
+  }
+}
+
+@keyframes fadeDown{
+  from{
+    opacity:0;
+    transform:translateY(-20px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+  .mentor-booking-container{
+    padding:20px;
+  }
+
+  .mentor-booking-card{
+    width:90%;
+  }
+
+  .mentor-booking-container h2{
+    font-size:22px;
+  }
+
+}
+
+.footer {
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  color: white;
+  padding: 50px 0 0 0;
+  margin-top: 80px;
+}
+.footer-container {
+  width: 85%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.footer-section {
+  flex: 1;
+  min-width: 250px;
+  margin-bottom: 30px;
+}
+.footer-section h2,
+.footer-section h3 {
+  margin-bottom: 20px;
+  color: #00c6ff;
+  font-size: 20px;
+}
+.footer-section p {
+  margin: 10px 0;
+  font-size: 14px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.footer-section p:hover {
+  color: #00c6ff;
+  transform: translateX(5px);
+}
+.footer-bottom {
+  text-align: center;
+  padding: 15px;
+  background: rgba(0, 0, 0, 0.4);
+  font-size: 14px;
+  margin-top: 20px;
+}
+@media(max-width:480px){
+
+  .mentor-booking-card{
+    padding:15px;
+  }
+
+  .chat-btn{
+    width:100%;
+  }
+
+  .mentor-buttons button{
+    width:100%;
+  }
+
+}

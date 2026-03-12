@@ -1,0 +1,132 @@
+.chat-box {
+  width: 400px;
+  margin: 30px auto;
+  font-family: Arial, sans-serif;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Fade Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.chat-window {
+  height: 350px;
+  overflow-y: auto;
+  border-radius: 15px;
+  padding: 15px;
+  background: #f1f1f1;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Message Common */
+.my-msg, .other-msg {
+  margin: 12px 0;
+  animation: slideUp 0.3s ease;
+}
+
+/* Slide Animation */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* My Message */
+.my-msg {
+  text-align: right;
+}
+
+.my-msg p {
+  background: linear-gradient(135deg, #4caf50, #2e7d32);
+  color: white;
+  display: inline-block;
+  padding: 10px 15px;
+  border-radius: 20px 20px 0 20px;
+  transition: 0.3s;
+}
+
+.my-msg p:hover {
+  transform: scale(1.05);
+}
+
+/* Other Message */
+.other-msg {
+  text-align: left;
+}
+
+.other-msg p {
+  background: #e0e0e0;
+  display: inline-block;
+  padding: 10px 15px;
+  border-radius: 20px 20px 20px 0;
+  transition: 0.3s;
+}
+
+.other-msg p:hover {
+  transform: scale(1.05);
+}
+
+/* Input Section */
+.chat-input {
+  display: flex;
+  margin-top: 15px;
+}
+
+.chat-input input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  outline: none;
+  transition: 0.3s;
+}
+
+.chat-input input:focus {
+  border-color: #4caf50;
+  box-shadow: 0 0 5px #4caf50;
+}
+
+.chat-input button {
+  margin-left: 10px;
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: none;
+  background: #4caf50;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.chat-input button:hover {
+  background: #388e3c;
+  transform: scale(1.05);
+}
+
+/* 🔥 Media Query for Mobile */
+@media (max-width: 500px) {
+  .chat-box {
+    width: 95%;
+    margin: 10px auto;
+  }
+
+  .chat-window {
+    height: 300px;
+  }
+
+  .chat-input button {
+    padding: 8px 15px;
+  }
+}

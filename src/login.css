@@ -1,0 +1,156 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family: "Poppins", sans-serif;
+}
+
+/* Background */
+
+#back{
+height:100vh;
+width:100%;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+background: linear-gradient(135deg,#667eea,#764ba2);
+animation: fadeIn 1s ease;
+}
+
+/* Logo */
+
+
+/* Card */
+
+#part{
+background: rgba(255,255,255,0.15);
+backdrop-filter: blur(10px);
+padding:40px;
+border-radius:20px;
+text-align:center;
+box-shadow:0 10px 30px rgba(0,0,0,0.2);
+animation: slideUp 1s ease;
+width:400px;
+}
+
+/* Heading */
+
+#h11{
+font-size:32px;
+color:white;
+margin-bottom:10px;
+}
+
+#part p{
+color:#eee;
+margin-bottom:30px;
+font-size:16px;
+}
+
+/* Buttons */
+
+#student,#mentor{
+width:200px;
+padding:12px;
+margin:10px;
+border:none;
+border-radius:30px;
+font-size:16px;
+cursor:pointer;
+transition:0.3s;
+font-weight:bold;
+}
+
+/* Student Button */
+
+#student{
+background:#00c853;
+color:white;
+}
+
+#student:hover{
+transform:scale(1.08);
+box-shadow:0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* Mentor Button */
+
+#mentor{
+background:#2979ff;
+color:white;
+}
+
+#mentor:hover{
+transform:scale(1.08);
+box-shadow:0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* Animations */
+
+@keyframes fadeIn{
+from{
+opacity:0;
+}
+to{
+opacity:1;
+}
+}
+
+@keyframes slideUp{
+from{
+transform:translateY(50px);
+opacity:0;
+}
+to{
+transform:translateY(0);
+opacity:1;
+}
+}
+
+@keyframes float{
+0%{
+transform:translateY(0);
+}
+50%{
+transform:translateY(-10px);
+}
+100%{
+transform:translateY(0);
+}
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+#part{
+width:90%;
+padding:30px;
+}
+
+#h11{
+font-size:26px;
+}
+
+#student,#mentor{
+width:100%;
+}
+
+.logo{
+width:90px;
+}
+
+}
+
+@media(max-width:480px){
+
+#h11{
+font-size:22px;
+}
+
+#part p{
+font-size:14px;
+}
+
+}
