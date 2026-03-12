@@ -6,12 +6,12 @@ import About from "./about";
 import MentorList from "./MentorList";
 import Student from "./StudentLog";
 import Mentor from "./Mentor";
-import Login from "./commonLog";
 import Profile from "./Profile";
 import ChatBox from "./chat";
 import Chat from "./chatt";
 import Bookings from "./booking";
 import MentorBookings from "./MentorDashboard";
+import Login from "./Login";
 
 
 function App() {
