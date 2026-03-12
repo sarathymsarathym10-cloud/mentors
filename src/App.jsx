@@ -5,7 +5,7 @@ import Home from "./Home";
 import About from "./about";
 import MentorList from "./MentorList";
 import Student from "./StudentLog";
-import Mentor from "./Mentor";
+import Mentor from "./mentor";
 import Profile from "./Profile";
 import ChatBox from "./chat";
 import Chat from "./chatt";
