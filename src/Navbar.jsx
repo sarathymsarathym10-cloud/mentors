@@ -1,10 +1,12 @@
 import { Link, useNavigate } from "react-router-dom";
+import { useState } from "react";
 import "./navbar.css";
 import logo from "./assets/logo.png";
 
 function Navbar({ currentUser, setCurrentUser }) {
 
   const navigate = useNavigate();
+  const [menuOpen, setMenuOpen] = useState(false); // ✅ state inside component
 
   const logout = () => {
     localStorage.removeItem("currentUser");
@@ -20,7 +22,12 @@ function Navbar({ currentUser, setCurrentUser }) {
           <img src={logo} alt="logo" className="logo" />
         </div>
 
-        <div className="listss">
+        {/* 📱 Hamburger */}
+        <div className="menu-icon" onClick={() => setMenuOpen(!menuOpen)}>
+          ☰
+        </div>
+
+        <div className={`listss ${menuOpen ? "show" : ""}`}>
 
           {/* 🔓 Not Login */}
           {!currentUser && (

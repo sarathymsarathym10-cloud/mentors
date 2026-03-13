@@ -98,6 +98,55 @@ nav {
   background: #e6c200;
   transform: scale(1.05);
 }
+/* Hamburger icon */
+.menu-icon{
+  display:none;
+  font-size:28px;
+  color:white;
+  cursor:pointer;
+}
+
+/* Mobile */
+@media (max-width:768px){
+
+  nav{
+    padding:10px;
+  }
+
+  .menu-icon{
+    display:block;
+  }
+
+  .listss{
+    flex-direction:column;
+    gap:15px;
+    background:#1a1a1a;
+    position:absolute;
+    top:70px;
+    right:0;
+    width:200px;
+    padding:20px;
+    border-radius:10px;
+    display:none;
+  }
+
+  .listss.show{
+    display:flex;
+    animation:fadeIn 0.4s ease;
+  }
+
+}
+
+@keyframes fadeIn{
+  from{
+    opacity:0;
+    transform:translateY(-10px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
 
 /* Responsive for mobile */
 @media (max-width: 768px) {
@@ -122,4 +171,5 @@ nav {
     from { opacity: 0; transform: translateY(-10px); }
     to { opacity: 1; transform: translateY(0); }
   }
+  
 }
